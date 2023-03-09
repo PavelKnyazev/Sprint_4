@@ -9,5 +9,5 @@ public class Config {
      * MOZILLA      браузер фаерфокс
      *
      */
-    public static final String BROWSER_AND_PLATFORM = "MOZILLA";
+    public static final String BROWSER_AND_PLATFORM = "CHROME";
 }

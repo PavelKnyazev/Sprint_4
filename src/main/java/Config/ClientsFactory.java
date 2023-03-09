@@ -42,7 +42,5 @@ public class ClientsFactory {
     }
 
 
-//    ChromeOptions options = new ChromeOptions();
-//options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
-//    WebDriver driver = new ChromeDriver(options);
+
 }
