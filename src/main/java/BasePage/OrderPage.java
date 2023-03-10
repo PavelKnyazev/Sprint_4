@@ -9,46 +9,34 @@ import java.util.List;
 
 
 public class OrderPage extends HomePage {
+
     /**
      * 1 часть страницы заказа
      */
-
-
     private static final By NAME = By.xpath("//input[@placeholder='* Имя']");  // локатор дял поля имени
     private static final By SECONDNAME = By.xpath("//input[@placeholder='* Фамилия']"); // локатор для поля фамилии
     private static final By ADRRESS = By.xpath("//input[@placeholder='* Адрес: куда привезти заказ']"); // локатор для поля адреса
     private static final By METRO_STATION = By.xpath("//input[@placeholder='* Станция метро']"); // локатор для поля метро
     private static final By PHONE = By.xpath("//input[@placeholder='* Телефон: на него позвонит курьер']"); // локатор для телефона
     private static final By METRO_STATION_LIST = By.xpath("//div[@class='select-search__select']/ul/li"); // локатор для выпадающего списка метро
-
     private static final By NEXT_BUTTON = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"); // локатор кнопки дальше
+
     /**
      * вторая часть страницы заказа
      */
     private static final By CALENDAR_FIELD = By.xpath("//input[@placeholder='* Когда привезти самокат']"); //локатор для поля даты когда привезти самокат
     private static final By CALENDAR_LIST = By.xpath("//div[@role='button']");  // локатор для выпадающего календаря с днями месяца
-
     private static final By RENTAL_PERIOD = By.xpath("//div[@class='Dropdown-control']"); // локатор поля выбора периода аренды самоката
     private static final By RENTA_PERIOD_LIST = By.xpath("//div[@class='Dropdown-option']");// локатор дял выпадающего списка выбора времени аренды
-
     private static final By COLOR = By.xpath("//label[@class='Checkbox_Label__3wxSf']"); // локатор для поля выбора цвета
-
     private static final By COMMENTS_FIELD = By.xpath("//input[@placeholder='Комментарий для курьера']");// локатор для поля комментариев
-
     private static final By ORDER_BUTTON = By.xpath("//div[@class='Order_Buttons__1xGrp']/button[text()='Заказать']"); // локатор для кнопки заказать
     private static final By YES_BUTTON = By.xpath("//button[text()='Да']"); // локатор для кнопки да в появляющемся окне подтверждения заказа
     private static final By CREATE_ORDER_WINDOW = By.xpath("//div[text()='Заказ оформлен']"); // локатор для сообщения , что заказ оформлен
 
-
-
     public OrderPage(WebDriver driver) {
         super(driver);
     }
-
-
-
-
-
 
     /**
      * Метод кликает на кнопку заказать на галвное странице, переходит на страницу
@@ -79,13 +67,6 @@ public class OrderPage extends HomePage {
         waitElementIsClickable(driver.findElement(ORDER_BUTTON)).click(); // нажимает кнопку сделать заказ под полями ввода
         waitElementIsClickable(driver.findElement(YES_BUTTON)).click();// нажимает кнопку ДА в появившимся окне подтверждения заказа
         checkElementIsVisible( (CREATE_ORDER_WINDOW)); // проверяет появился ли элемент который говорит о успешном создании заказа
-
-
-
-
-
-
     }
-
 
 }

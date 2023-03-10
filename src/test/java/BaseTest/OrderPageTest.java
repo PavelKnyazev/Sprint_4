@@ -7,13 +7,11 @@ import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class OrderPageTest extends SuperPage {
 
-
     private final String name;
     private final String secondName;
     private final String adress;
     private final String phone;
     private final String comments;
-
 
     public OrderPageTest(String name, String secondName, String adress, String phone, String comments) {
         this.name = name;
@@ -33,9 +31,6 @@ public class OrderPageTest extends SuperPage {
         };
     }
 
-
-
-
     /**
      * Тест переходит на старницу оформления заказа, заполняет поля и проверяет офрмояется ли заказ
      */
@@ -45,8 +40,5 @@ public class OrderPageTest extends SuperPage {
         homePage.coockies();
         orderPage.orderTest(name,secondName,adress,phone,comments);
     }
-
-
-
 
 }

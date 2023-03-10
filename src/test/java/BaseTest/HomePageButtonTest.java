@@ -3,10 +3,6 @@ package BaseTest;
 import org.junit.Test;
 
 public class HomePageButtonTest extends SuperPage {
-
-
-
-
     /**
      * тест проверяет ведет ли верхняя кнопка заказать на страницу оформоления заказа
      */
@@ -16,7 +12,6 @@ public class HomePageButtonTest extends SuperPage {
         homePage.coockies();
         homePage.testUpButton();
     }
-
 
     /**
      * тест проверяет ведет ли нижняя кнопка заказать на страницу оформоления заказа
@@ -28,4 +23,5 @@ public class HomePageButtonTest extends SuperPage {
         homePage.scroll();
         homePage.testDownButton();
     }
+
 }
